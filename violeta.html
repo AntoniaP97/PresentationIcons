@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Violeta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Import css file-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/violetaIcons.ttf">
+</head>
+<body>
+    <div class="flex flex-col h-full">
+        <div class=" bg-[#712F99] flex items-center fixed w-full z-30  justify-start pl-12">
+          <img src="images/site-logo-2.png" alt="Violeta" class="h-20 my-3">
+        </div>
+
+        <div id="projectsContainer"  class=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-40 m-20">
+
+        </div>
+    </div>
+    <script>
+        // JSON data
+        const jsonData = [
+            { "name": "detergent" },
+            { "name": "softener" },
+            { "name": "softener2" },
+            { "name": "softener3" },
+            { "name": "dishDetergent2" },
+            { "name": "dishDetergent" },
+            { "name": "spray" },
+            { "name": "spray2" },
+            {"name": "cosmetics"},
+            { "name": "toiletPaper"},
+            {"name": "paperTowels" },
+            {"name": "paperTowels2"},
+            {"name": "paperTowels3"},
+            {"name": "paperTowels4"},
+            {"name": "wipes"},
+            {"name": "wipes2"},
+            {"name": "toiletSpray"},
+            {"name": "pads"},
+            {"name": "cotton"},
+            {"name": "cotton2"},
+            {"name": "diaper"},
+            {"name": "diaper2"},
+            {"name": "diaper3"},
+            {"name": "soap"},
+            {"name": "soap2"},
+            {"name": "soap3"},
+            {"name": "shampoo"},
+            {"name": "shampoo2"},
+
+
+        ];
+
+        // Get the projects container
+        const projectsContainer = document.getElementById('projectsContainer');
+
+        // Loop through the JSON data and create project elements
+        jsonData.forEach(item => {
+            const projectDiv = document.createElement('div');
+            projectDiv.className = 'flip-card project mb-20';
+            projectDiv.innerHTML = `
+                <div class="flip-card-inner bg-gray-100 shadow-xl flex flex-col justify-between ">
+                    <div class="flip-card-front bg-gray-100">
+                        <span class="icon-${item.name} text-[200px] text-[#712F99] hover:text-[#EBD9F6]"></span>
+                    </div>
+                    <div class="flip-card-back bg-[#EBD9F6]  rounded-xl">
+                        <span class="icon-${item.name} text-[200px] text-[#712F99]"></span>
+                    </div>
+                </div>
+            `;
+            projectsContainer.appendChild(projectDiv);
+        });
+    </script>
+</body>
+</html>

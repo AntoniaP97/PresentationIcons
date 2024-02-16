@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/violetaIcons.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: #000;
+    -moz-osx-font-smoothing: #712F99;
+  }
+
+
+  .icon-detergent:before {
+    content: "\0026";
+  }
+  .icon-dishDetergent::before{
+    content: "\0040";
+  }
+  .icon-dishDetergent2::before{
+    content: "\002E";
+  }
+  .icon-spray:before {
+    content: "\0039";
+  }
+  .icon-spray2:before {
+    content: "\002C";
+  }
+  .icon-softener:before{
+    content: "\0030";
+  }
+  .icon-softener2:before{
+    content: "\003B";
+  }
+  .icon-softener3:before{
+    content: "\003C";
+  }
+  .icon-toiletPaper:before {
+    content: "\002B";
+  }
+  .icon-spray2:before {
+    content: "\002C";
+  }
+  .icon-cosmetics:before {
+    content: "\002F";
+  }
+  .icon-paperTowels:before {
+    content: "\0029";
+  }
+  .icon-paperTowels2:before {
+    content: "\002A";
+  }
+  .icon-paperTowels3:before {
+    content: "\003F";
+  }
+  .icon-paperTowels4:before {
+    content: "\003E";
+  }
+  .icon-wipes:before {
+    content: "\0027";
+  }
+  .icon-wipes2:before {
+    content: "\0028";
+  }
+  .icon-diaper:before {
+    content: "\0032";
+  }
+  .icon-diaper2:before {
+    content: "\0031";
+  }
+  .icon-diaper3:before {
+    content: "\0038";
+  }
+  .icon-pads:before {
+    content: "\003A";
+  }
+  .icon-toiletSpray:before {
+    content: "\003D";
+  }
+  .icon-soap:before {
+    content: "\0033";
+  }
+  .icon-soap2:before {
+    content: "\0035";
+  }
+  .icon-soap3:before {
+    content: "\0037";
+  }
+  .icon-shampoo:before {
+    content: "\0036";
+  }
+  .icon-shampoo2:before {
+    content: "\0034";
+  }
+  .icon-cotton:before {
+    content: "\0041";
+  }
+  .icon-cotton2:before {
+    content: "\0042";
+  }
+
+
+
+
+.flip-card {
+  perspective: 1000px;
+  height: 340px;
+  /* Set a fixed height for the flip card */
+}
+.project {
+  height: 300px !important;
+  /* Set a fixed height for the projects flip card */
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  position: relative;
+  /* Make the inner element positioned relative */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  /* Position the front and back sides */
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  /* Initially hide the back side */
+}
