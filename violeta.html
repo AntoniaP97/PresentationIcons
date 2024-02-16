@@ -61,11 +61,11 @@
             const projectDiv = document.createElement('div');
             projectDiv.className = 'flip-card project mb-20';
             projectDiv.innerHTML = `
-                <div class="flip-card-inner bg-gray-100 shadow-xl flex flex-col justify-between ">
-                    <div class="flip-card-front bg-gray-100">
+                <div class="flip-card-inner bg-gray-100 rounded-xl shadow-xl flex flex-col justify-between ">
+                    <div class="flip-card-front bg-gray-100 rounded-xl">
                         <span class="icon-${item.name} text-[200px] text-[#712F99] hover:text-[#EBD9F6]"></span>
                     </div>
-                    <div class="flip-card-back bg-[#EBD9F6]  rounded-xl">
+                    <div class="flip-card-back bg-[#EBD9F6]  rounded-xl z-2">
                         <span class="icon-${item.name} text-[200px] text-[#712F99]"></span>
                     </div>
                 </div>
